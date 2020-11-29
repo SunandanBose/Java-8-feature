@@ -21,3 +21,8 @@ _[Note : Streams are lazily constructed i.e intermediate operations are not eval
   These operations are always lazy, i.e. they do not process the stream at the call site, an intermediate operation can only process data when there is a terminal     operation. Some of the intermediate operations are filter, map and flatMap.
   Terminal operations terminate the pipeline and initiate stream processing. The stream is passed through all intermediate operations during terminal operation       call. Terminal operations include forEach, reduce, Collect and sum.
 
+## Difference Between Map and flatMap Stream Operation?
+- The main difference between map and flatMap is:
+  flatMap produces a stream of new vaues, whereas map produces a single value for each input.
+  
+  
