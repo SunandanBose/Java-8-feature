@@ -6,7 +6,7 @@ What is a Stream?
 - Stream helps us to move from an imperative way to functional programming [imperative = unavoidable]
 - Used with collection
 
-~[Note : Streams are lazily constructed i.e intermediate operations are not evaluated until terminal operation is invoked]~
+_[Note : Streams are lazily constructed i.e intermediate operations are not evaluated until terminal operation is invoked]_
 
 ## What is difference with Collections and Stream?
 - Collections are used to store and group the data in a particular data structure like List, Set or Map. But, streams are used to perform complex data processing operations like filtering, matching, mapping etc on stored data such as arrays, collections
