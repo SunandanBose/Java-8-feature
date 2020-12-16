@@ -11,14 +11,20 @@ public class Deadlock {
         System.out.println("main method start"+ Thread.currentThread().getName());
         Thread1 thread1 = new Thread1(s1, s2);
         thread1.start();
-//        try {
-//            thread1.join();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            thread1.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         Thread2 thread2 = new Thread2(s1,s2);
         thread2.start();
         System.out.println("main method end"+ Thread.currentThread().getName());
+
+
+        // running same thread twice gives IllegalThreadStateException exception
+        Thread1 thread3 = new Thread1(s1, s2);
+        thread3.start();
+        thread3.start();
     }
 }
