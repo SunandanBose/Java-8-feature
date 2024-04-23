@@ -4,17 +4,24 @@ import beans.Car;
 import beans.Person;
 import beans.PersonDTO;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import mockdata.MockData;
-import org.assertj.core.util.Lists;
+import org.assertj.core.api.AbstractBigDecimalAssert;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Java6Assertions.assertThat;
+
 
 public class StreamAPI {
 
