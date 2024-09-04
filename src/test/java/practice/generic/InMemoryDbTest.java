@@ -75,6 +75,4 @@ class InMemoryDbTest {
         assertTrue(optionalValue.isPresent());
         assertEquals(value2, optionalValue.get());
     }
-
-
 }

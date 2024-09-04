@@ -11,7 +11,6 @@ public class InMemoryDb<K> {
 
     public Map<String, K> db = new ConcurrentHashMap<>();
 
-    // Create can become upsert
     public void create(String key, K value) throws DuplicateKeyException {
 
         if (db.containsKey(key)) {
