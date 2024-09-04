@@ -1,6 +1,5 @@
 package practice.producerConsumer;
 
-import java.util.Arrays;
 import java.util.concurrent.BlockingQueue;
 
 public class Consumer implements Runnable {
@@ -16,7 +15,7 @@ public class Consumer implements Runnable {
     public void run() {
         try {
             Message msg;
-            while ((msg = queue.take()).getMessage() != "exit") {
+            while (!(msg = queue.take()).getMessage().equals("exit")) {
 //                System.out.println("Start Queue");
 //                queue.stream().forEach((i) -> i.getMessage());
 //                System.out.println("End Queue");
