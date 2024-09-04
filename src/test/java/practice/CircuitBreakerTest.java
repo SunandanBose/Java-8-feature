@@ -1,10 +1,14 @@
 package practice;
 
-import junit.framework.TestCase;
+
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class CircuitBreakerTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CircuitBreakerTest {
+    @Test
     public void testCircuitBreakerDoesNotStopsAfter3CallsWhenNoException() throws Exception {
         CircuitBreaker circuitBreaker = new CircuitBreaker();
         AtomicInteger counter = new AtomicInteger(0);
@@ -21,6 +25,7 @@ public class CircuitBreakerTest extends TestCase {
         assertEquals(5, counter.get());
     }
 
+    @Test
     public void testCircuitBreakerStopsAfter3CallsOnlyOnException() throws Exception {
         CircuitBreaker circuitBreaker = new CircuitBreaker();
         AtomicInteger counter = new AtomicInteger(0);
